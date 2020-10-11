@@ -1,4 +1,7 @@
 ### Hi there 👋
+I'm Dustin Firebaugh and I like to write software.
+
+Check out my personal site https://dustinfirebaugh.com
 
 <!--
 **dfirebaugh/dfirebaugh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +17,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+- 🔭 I’m currently working on [spritely](https://github.com/dfirebaugh/spritely) 
+- 🤔 I’m looking for help with [spritely](https://github.com/dfirebaugh/spritely); [pizza-from-scratch](https://github.com/dfirebaugh/pizza-from-scratch); [hack-points](https://github.com/dfirebaugh/hack-points); [kana-board](https://github.com/dfirebaugh/kana-board) 
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=dfirebaugh&theme=synthwave&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dfirebaugh&theme=synthwave&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
