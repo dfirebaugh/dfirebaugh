@@ -17,8 +17,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-- 🔭 I’m currently working on [spritely](https://github.com/dfirebaugh/spritely); [memberserver](https://github.com/dfirebaugh/memberserver)
-- 🤔 I’m looking for help with [spritely](https://github.com/dfirebaugh/spritely); [pizza-from-scratch](https://github.com/dfirebaugh/pizza-from-scratch); [hack-points](https://github.com/dfirebaugh/hack-points); [kana-board](https://github.com/dfirebaugh/kana-board); ; [memberserver](https://github.com/dfirebaugh/memberserver)
+- 🔭 I’m currently working on [spritely](https://github.com/dfirebaugh/spritely); [memberserver](https://github.com/HackRVA/memberdashboard)
+- 🤔 I’m looking for help with [spritely](https://github.com/dfirebaugh/spritely); [hack-points](https://github.com/HackRVA/hackpoints); [kana-board](https://github.com/dfirebaugh/kana-board); ; [memberserver](https://github.com/HackRVA/memberdashboard)
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=dfirebaugh&theme=synthwave&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
