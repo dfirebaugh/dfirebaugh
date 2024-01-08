@@ -20,6 +20,3 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on [punch](https://github.com/dfirebaugh/punch); [spritely](https://github.com/dfirebaugh/spritely); [memberserver](https://github.com/HackRVA/memberdashboard)
 - 🤔 I’m looking for help with [spritely](https://github.com/dfirebaugh/spritely); [hack-points](https://github.com/HackRVA/hackpoints); [kana-board](https://github.com/dfirebaugh/kana-board); [memberserver](https://github.com/HackRVA/memberdashboard)
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=dfirebaugh&theme=synthwave&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dfirebaugh&theme=synthwave&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
