@@ -35,6 +35,18 @@ return {
     "chrisgrieser/nvim-origami",
     event = "BufReadPost", -- later will not save folds
     opts = true,
+    config = function()
+      -- Wrap mkview in pcall to handle errors
+      local origami = require("origami")
+      origami.remember = function()
+        if vim.fn.bufname('%') ~= '' then
+          local success, err = pcall(vim.api.nvim_command, 'mkview')
+          if not success then
+            vim.notify('Error saving view: ' .. err, vim.log.levels.ERROR)
+          end
+        end
+      end
+    end
   },
   {
     "jghauser/fold-cycle.nvim",
