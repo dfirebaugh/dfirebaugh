@@ -1,7 +1,15 @@
--- Define a fold text formatter
 local foldIcon = ""
 local hlgroup = "NonText"
 local function foldTextFormatter(virtText, lnum, endLnum, width, truncate)
+  -- Check if the buffer is valid and exists
+  if not vim.api.nvim_buf_is_valid(0) or vim.api.nvim_buf_get_option(0, 'bufhidden') == 'wipe' then
+    return virtText
+  end
+
+  if vim.api.nvim_buf_line_count(0) == 0 then
+    return virtText
+  end
+
   local newVirtText = {}
   local suffix = "  " .. foldIcon .. "  " .. tostring(endLnum - lnum)
   local sufWidth = vim.fn.strdisplaywidth(suffix)
@@ -28,15 +36,12 @@ local function foldTextFormatter(virtText, lnum, endLnum, width, truncate)
   return newVirtText
 end
 
---------------------------------------------------------------------------------
-
 return {
   {
     "chrisgrieser/nvim-origami",
-    event = "BufReadPost", -- later will not save folds
+    event = "BufReadPost",
     opts = true,
     config = function()
-      -- Wrap mkview in pcall to handle errors
       local origami = require("origami")
       origami.remember = function()
         if vim.fn.bufname('%') ~= '' then
@@ -70,7 +75,7 @@ return {
   {
     "kevinhwang91/nvim-ufo",
     dependencies = "kevinhwang91/promise-async",
-    event = "BufReadPost", -- needed for folds to load properly
+    event = "BufReadPost",
     keys = {
       {
         "zr",
@@ -116,27 +121,17 @@ return {
       },
     },
     init = function()
-      -- INFO fold commands usually change the foldlevel, which fixes folds, e.g.
-      -- auto-closing them after leaving insert mode, however ufo does not seem to
-      -- have equivalents for zr and zm because there is no saved fold level.
-      -- Consequently, the vim-internal fold levels need to be disabled by setting
-      -- them to 99
       vim.opt.foldlevel = 99
       vim.opt.foldlevelstart = 99
     end,
     opts = {
       provider_selector = function(_, ft, _)
-        -- INFO some filetypes only allow indent, some only LSP, some only
-        -- treesitter. However, ufo only accepts two kinds as priority,
-        -- therefore making this function necessary :/
         local lspWithOutFolding = { "markdown", "bash", "sh", "bash", "zsh", "css", "html", "python" }
         if vim.tbl_contains(lspWithOutFolding, ft) then
           return { "treesitter", "indent" }
         end
         return { "lsp", "indent" }
       end,
-      -- open opening the buffer, close these fold kinds
-      -- use `:UfoInspect` to get available fold kinds from the LSP
       close_fold_kinds_for_ft = { ["*"] = { "imports" } },
       open_fold_hl_timeout = 500,
       fold_virt_text_handler = foldTextFormatter,
