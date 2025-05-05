@@ -94,6 +94,7 @@
 	"pf" '(projectile-find-file :which-key "find file in project")
 	"pb" '(projectile-switch-to-buffer :which-key "switch project buffer")
 	"ps" '(projectile-ripgrep :which-key "search in project")
+	"pt" '(projectile-run-project :which-key "run project")
 	"b" '(:ignore t :which-key "buffers")
 	"bb" '(switch-to-buffer :which-key "switch buffer")
 	"bi" '(ibuffer :which-key "ibuffer")
